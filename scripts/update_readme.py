@@ -1,17 +1,24 @@
 import os
+from datetime import datetime
 
 def generate_readme():
-    # 1. Configuration
     header = "# 🚀 C++ Problem Solving Journey\n\n"
-    ignore_list = ['.git', '.github', '__pycache__', '.vscode']
+    ignore_list = ['.git', '.github', '__pycache__', '.vscode', 'scripts']
     
-    # 2. Get all topic directories
-    topics = sorted([d for d in os.listdir('.') if os.path.isdir(d) and d not in ignore_list])
+    # Define absolute root path
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    root_dir = os.path.dirname(script_dir)
     
-    # 3. Stats and Intro Content
+    # Get topics only from inside Practise Problem folder
+    # Added .isdigit() check to topic folders for extra safety
+    topics = sorted([d for d in os.listdir(root_dir) 
+                    if os.path.isdir(os.path.join(root_dir, d)) 
+                    and d not in ignore_list 
+                    and d[0].isdigit()])
+    
     total_problems = 0
-    
-    # This is the "Philosophy" section we discussed
+    last_updated = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
     philosophy = """
 > [!IMPORTANT]
 > **Logic & Code:** 100% handwritten by me.  
@@ -21,13 +28,12 @@ This repository tracks my progress as I master C++. Every solution is linked to 
 
     table_content = ""
     
-    # 4. Generate the Tables
     for topic in topics:
         table_content += f"## 📁 {topic.replace('_', ' ')}\n"
         table_content += "| # | Problem Name | Code Link |\n"
         table_content += "|---|--------------|-----------|\n"
         
-        folder_path = os.path.join('.', topic)
+        folder_path = os.path.join(root_dir, topic)
         files = sorted([f for f in os.listdir(folder_path) if f.endswith('.cpp')])
         
         for file in files:
@@ -41,16 +47,18 @@ This repository tracks my progress as I master C++. Every solution is linked to 
         
         table_content += "\n"
 
-    # 5. Create the Stats Section
     stats = f"### 📊 Stats\n"
-    stats += f"**Total Problems Solved:** {total_problems}\n\n"
-    stats += "---\n\n"
+    stats += f"**Total Problems Solved:** {total_problems}  \n"
+    stats += f"**Last Updated:** {last_updated}\n\n"
+    stats += "-----"
 
-    # 6. Write to README.md (Order: Header -> Stats -> Philosophy -> Table)
-    with open("README.md", "w", encoding="utf-8") as f:
+    # Save README to root_dir
+    readme_path = os.path.join(root_dir, "README.md")
+    with open(readme_path, "w", encoding="utf-8") as f:
         f.write(header + stats + philosophy + table_content)
     
-    print(f"✨ README.md updated! Total problems found: {total_problems}")
+    return total_problems
 
 if __name__ == "__main__":
-    generate_readme()
+    count = generate_readme()
+    print(f"TOTAL_COUNT:{count}")
