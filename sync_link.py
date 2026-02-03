@@ -8,8 +8,8 @@ scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/au
 creds = ServiceAccountCredentials.from_json_keyfile_name("credentials.json", scope)
 client = gspread.authorize(creds)
 
-# 2. Open the Sheet (MATCH YOUR SHEET NAME EXACTLY)
-SHEET_NAME = "CPP Problem Solving" 
+# 2. Open the Sheet (Make sure this matches exactly what the debug script found)
+SHEET_NAME = "Problem Solving [Python access]" 
 sheet = client.open(SHEET_NAME).sheet1 
 
 def sync_github_links():
@@ -31,28 +31,33 @@ def sync_github_links():
         for filename in files:
             if filename.endswith(".cpp") and "_" in filename:
                 try:
-                    # Extract Serial Number
                     serial_num = filename.split('_')[0]
                     
-                    # Search for matching Row
                     target_row_index = None
                     for i, row in enumerate(all_rows):
                         if len(row) >= 2:
-                            if str(row[0]).strip() == str(serial_num) and str(row[1]).strip() == folder_name:
+                            # Matches Column A (Topic) and Column B (#)
+                            if str(row[0]).strip() == folder_name and str(row[1]).strip() == str(serial_num):
                                 target_row_index = i + 1
                                 break
                     
                     if target_row_index:
-                        full_link = f"{base_repo_url}{folder_name}/{filename}"
-                        sheet.update_cell(target_row_index, 8, full_link)
-                        print(f"✅ Row {target_row_index}: Synced {folder_name} #{serial_num}")
+                        full_url = f"{base_repo_url}{folder_name}/{filename}"
+                        
+                        # NEW LOGIC: Use HYPERLINK formula for a cleaner look
+                        hyperlink_formula = f'=HYPERLINK("{full_url}", "🔗 View Code")'
+                        
+                        # Update Column H (8th column) with the formula
+                        sheet.update_cell(target_row_index, 8, hyperlink_formula)
+                        print(f"✅ Row {target_row_index}: Linked {filename} with clean label")
+                        
                         time.sleep(1) 
                     else:
-                        print(f"⚠️ No match in sheet for: {folder_name} file #{serial_num}")
+                        print(f"⚠️ No match for: {folder_name} #{serial_num}")
 
                 except Exception as e:
                     print(f"⚠️ Error processing {filename}: {e}")
 
 if __name__ == "__main__":
     sync_github_links()
-    print("\nDone!")
+    print("\n✨ All links updated to clean 'View Code' format!")

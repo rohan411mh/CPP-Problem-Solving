@@ -1,6 +1,6 @@
-/*1️⃣ Array Basics
-Write a program that:
+/* 1️. Sum and Average of Array Elements
 
+Write a program that:
 // Takes 5 integers from the user into an array
 Prints:
 The array elements
