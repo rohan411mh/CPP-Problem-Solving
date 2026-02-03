@@ -1,1 +1,15 @@
+# Ignore Compiled Executables (Windows)
 *.exe
+*.out
+
+# Ignore Sensitive API Credentials
+credentials.json
+
+# Ignore IDE/Editor Folders
+.vscode/
+.idea/
+__pycache__/
+
+# Ignore temporary system files
+Thumbs.db
+.DS_Store
