@@ -10,6 +10,13 @@ def generate_readme():
     
     # 3. Count total problems and build content
     total_problems = 0
+    intro = """
+This repository tracks my progress as I master C++. 
+
+> [!IMPORTANT]
+> **Logic & Code:** 100% handwritten by me.  
+> **Automation:** Python scripts (sync & readme) built with the help of AI to maintain an efficient workflow.
+\n\n"""
     content = ""
     
     for topic in topics:
