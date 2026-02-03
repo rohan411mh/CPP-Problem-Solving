@@ -1,44 +1,48 @@
 import os
 
 def generate_readme():
+    # 1. Configuration
     header = "# 🚀 C++ Problem Solving Journey\n\n"
-    intro = "This repository tracks my progress as I master C++. Every solution is linked to my tracking sheet and categorized by topic.\n\n"
-    
-    # Folders to ignore
     ignore_list = ['.git', '.github', '__pycache__', '.vscode']
     
-    # Get all directories and sort them (01_Arrays, 02_Pointers, etc.)
+    # 2. Get all topic directories
     topics = sorted([d for d in os.listdir('.') if os.path.isdir(d) and d not in ignore_list])
     
+    # 3. Count total problems and build content
+    total_problems = 0
     content = ""
+    
     for topic in topics:
         content += f"## 📁 {topic.replace('_', ' ')}\n"
         content += "| # | Problem Name | Code Link |\n"
         content += "|---|--------------|-----------|\n"
         
-        # Get all .cpp files in this topic folder
         folder_path = os.path.join('.', topic)
         files = sorted([f for f in os.listdir(folder_path) if f.endswith('.cpp')])
         
         for file in files:
+            total_problems += 1  # Increment the counter
             if "_" in file:
-                # Split '1_Name.cpp' into '1' and 'Name'
                 parts = file.replace(".cpp", "").split("_", 1)
                 num = parts[0]
                 name = parts[1].replace("_", " ")
-                
-                # Create the GitHub link
                 link = f"https://github.com/rohan411mh/CPP-Problem-Solving/blob/main/{topic}/{file}"
-                
                 content += f"| {num} | {name} | [View Solution]({link}) |\n"
         
         content += "\n"
 
-    # Write to README.md
-    with open("README.md", "w", encoding="utf-8") as f:
-        f.write(header + intro + content)
+    # 4. Create the Stats Section (Badges look great here!)
+    stats = f"### 📊 Stats\n"
+    stats += f"**Total Problems Solved:** {total_problems}\n\n"
+    stats += "---\n\n"
     
-    print("✨ README.md updated successfully with all topics!")
+    intro = "This repository tracks my progress as I master C++. Every solution is linked to my tracking sheet and categorized by topic.\n\n"
+
+    # 5. Write to README.md (Header + Stats + Intro + Table)
+    with open("README.md", "w", encoding="utf-8") as f:
+        f.write(header + stats + intro + content)
+    
+    print(f"✨ README.md updated! Total problems found: {total_problems}")
 
 if __name__ == "__main__":
     generate_readme()

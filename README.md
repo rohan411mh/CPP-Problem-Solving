@@ -1,5 +1,10 @@
 # 🚀 C++ Problem Solving Journey
 
+### 📊 Stats
+**Total Problems Solved:** 8
+
+---
+
 This repository tracks my progress as I master C++. Every solution is linked to my tracking sheet and categorized by topic.
 
 ## 📁 01 Arrays
