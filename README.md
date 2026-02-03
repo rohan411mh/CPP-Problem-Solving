@@ -15,7 +15,7 @@ This repository tracks my progress as I master C++. Every solution is linked to 
 ## 📁 01 Arrays
 | # | Problem Name | Code Link |
 |---|--------------|-----------|
-| 01 | sum and average | [View Solution](https://github.com/rohan411mh/CPP-Problem-Solving/blob/main/01_Arrays/01_sum_and_average.cpp) |
+| 1 | sum and average | [View Solution](https://github.com/rohan411mh/CPP-Problem-Solving/blob/main/01_Arrays/1_sum_and_average.cpp) |
 | 2 | max min | [View Solution](https://github.com/rohan411mh/CPP-Problem-Solving/blob/main/01_Arrays/2_max_min.cpp) |
 | 3 | reverse array in place | [View Solution](https://github.com/rohan411mh/CPP-Problem-Solving/blob/main/01_Arrays/3_reverse_array_in_place.cpp) |
 | 4 | count even odd | [View Solution](https://github.com/rohan411mh/CPP-Problem-Solving/blob/main/01_Arrays/4_count_even_odd.cpp) |
@@ -26,5 +26,5 @@ This repository tracks my progress as I master C++. Every solution is linked to 
 ## 📁 02 Pointers
 | # | Problem Name | Code Link |
 |---|--------------|-----------|
-| 01 | print array using pointers | [View Solution](https://github.com/rohan411mh/CPP-Problem-Solving/blob/main/02_Pointers/01_print_array_using_pointers.cpp) |
+| 1 | print array using pointers | [View Solution](https://github.com/rohan411mh/CPP-Problem-Solving/blob/main/02_Pointers/1_print_array_using_pointers.cpp) |
 
