@@ -1,8 +1,8 @@
 # 🚀 C++ Problem Solving Journey
 
 ### 📊 Stats
-**Total Problems Solved:** 11  
-**Last Updated:** 2026-02-04 23:07:56
+**Total Problems Solved:** 12  
+**Last Updated:** 2026-02-05 00:02:40
 
 -----
 > [!IMPORTANT]
@@ -28,5 +28,6 @@ This repository tracks my progress as I master C++. Every solution is linked to 
 | 1 | print array using pointers | [View Solution](https://github.com/rohan411mh/CPP-Problem-Solving/blob/main/02_Pointers/1_print_array_using_pointers.cpp) |
 | 2 | sum array pointers | [View Solution](https://github.com/rohan411mh/CPP-Problem-Solving/blob/main/02_Pointers/2_sum_array_pointers.cpp) |
 | 3 | swap variables pass-by-reference | [View Solution](https://github.com/rohan411mh/CPP-Problem-Solving/blob/main/02_Pointers/3_swap_variables_pass-by-reference.cpp) |
-| 4 | modify int using double pointers | [View Solution](https://github.com/rohan411mh/CPP-Problem-Solving/blob/main/02_Pointers/4_modify_int_using_double_pointers.cpp) |
+| 4 | modify int value using double pointers | [View Solution](https://github.com/rohan411mh/CPP-Problem-Solving/blob/main/02_Pointers/4_modify_int_value_using_double_pointers.cpp) |
+| 5 | array traversal using pointers | [View Solution](https://github.com/rohan411mh/CPP-Problem-Solving/blob/main/02_Pointers/5_array_traversal_using_pointers.cpp) |
 

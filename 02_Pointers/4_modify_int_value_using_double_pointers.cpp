@@ -6,10 +6,11 @@
 
 int main() {
     int x=5;
+    std::cout << "The initial value of x is "<< x << std::endl;
     int* p=&x;
     int** pp=&p;
     // use pp to change the value of x
     **pp = 50;
-    std::cout <<"The value of x is now "<< x;
+    std::cout << "The modified value of x using double pointer is "<< x << std::endl;
     return 0;
 }   
