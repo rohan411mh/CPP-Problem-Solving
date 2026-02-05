@@ -21,7 +21,7 @@ def generate_readme():
 
     philosophy = """
 > [!IMPORTANT]
-> **Logic & Code:** 100% handwritten by me.  
+> **Logic & Code:** handwritten by me.  
 > **Automation:** Python scripts (sync & readme) built with the help of AI to maintain an efficient workflow.
 
 This repository tracks my progress as I master C++. Every solution is linked to my tracking sheet and categorized by topic.\n\n"""

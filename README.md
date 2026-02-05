@@ -1,12 +1,12 @@
 # 🚀 C++ Problem Solving Journey
 
 ### 📊 Stats
-**Total Problems Solved:** 12  
-**Last Updated:** 2026-02-05 00:02:40
+**Total Problems Solved:** 14  
+**Last Updated:** 2026-02-05 23:54:23
 
 -----
 > [!IMPORTANT]
-> **Logic & Code:** 100% handwritten by me.  
+> **Logic & Code:** handwritten by me.  
 > **Automation:** Python scripts (sync & readme) built with the help of AI to maintain an efficient workflow.
 
 This repository tracks my progress as I master C++. Every solution is linked to my tracking sheet and categorized by topic.
@@ -30,4 +30,10 @@ This repository tracks my progress as I master C++. Every solution is linked to 
 | 3 | swap variables pass-by-reference | [View Solution](https://github.com/rohan411mh/CPP-Problem-Solving/blob/main/02_Pointers/3_swap_variables_pass-by-reference.cpp) |
 | 4 | modify int value using double pointers | [View Solution](https://github.com/rohan411mh/CPP-Problem-Solving/blob/main/02_Pointers/4_modify_int_value_using_double_pointers.cpp) |
 | 5 | array traversal using pointers | [View Solution](https://github.com/rohan411mh/CPP-Problem-Solving/blob/main/02_Pointers/5_array_traversal_using_pointers.cpp) |
+| 6 | pointer constants | [View Solution](https://github.com/rohan411mh/CPP-Problem-Solving/blob/main/02_Pointers/6_pointer_constants.cpp) |
+
+## 📁 03 Structs
+| # | Problem Name | Code Link |
+|---|--------------|-----------|
+| 03 | book cheapest | [View Solution](https://github.com/rohan411mh/CPP-Problem-Solving/blob/main/03_Structs/03_book_cheapest.cpp) |
 
