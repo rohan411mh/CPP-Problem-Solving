@@ -1,8 +1,8 @@
 # 🚀 C++ Problem Solving Journey
 
 ### 📊 Stats
-**Total Problems Solved:** 14  
-**Last Updated:** 2026-02-05 23:54:23
+**Total Problems Solved:** 17  
+**Last Updated:** 2026-02-06 23:58:59
 
 -----
 > [!IMPORTANT]
@@ -35,5 +35,16 @@ This repository tracks my progress as I master C++. Every solution is linked to 
 ## 📁 03 Structs
 | # | Problem Name | Code Link |
 |---|--------------|-----------|
-| 03 | book cheapest | [View Solution](https://github.com/rohan411mh/CPP-Problem-Solving/blob/main/03_Structs/03_book_cheapest.cpp) |
+| 1 | book cheapest | [View Solution](https://github.com/rohan411mh/CPP-Problem-Solving/blob/main/03_Structs/1_book_cheapest.cpp) |
+| 2 | student avg marks | [View Solution](https://github.com/rohan411mh/CPP-Problem-Solving/blob/main/03_Structs/2_student_avg_marks.cpp) |
+
+## 📁 04 Unions
+| # | Problem Name | Code Link |
+|---|--------------|-----------|
+| 1 | memory shape shifter | [View Solution](https://github.com/rohan411mh/CPP-Problem-Solving/blob/main/04_Unions/1_memory_shape_shifter.cpp) |
+
+## 📁 05 Enums
+| # | Problem Name | Code Link |
+|---|--------------|-----------|
+| 1 | meal planner | [View Solution](https://github.com/rohan411mh/CPP-Problem-Solving/blob/main/05_Enums/1_meal_planner.cpp) |
 
